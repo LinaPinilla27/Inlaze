@@ -1,0 +1,46 @@
+<div class="min-h-screen flex items-center justify-center bg-gray-200">
+  <div class="w-full max-w-md bg-white shadow-md rounded px-8 py-6">
+    <h1 class="text-2xl font-bold mb-4 text-center">Iniciar Sesión</h1>
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+      <div class="mb-4">
+        <label for="email" class="block text-sm font-bold text-gray-700">
+          Correo Electrónico
+        </label>
+        <input
+          id="email"
+          type="email"
+          placeholder="Ingrese su correo electrónico"
+          class="w-full py-2 px-3 border rounded shadow-sm focus:outline-none focus:border-blue-500"
+          formControlName="email"
+        />
+      </div>
+      <div class="mb-4">
+        <label for="password" class="block text-sm font-bold text-gray-700">
+          Contraseña
+        </label>
+        <input
+          id="password"
+          type="password"
+          placeholder="*********"
+          class="w-full py-2 px-3 border rounded shadow-sm focus:outline-none focus:border-blue-500"
+          formControlName="password"
+        />
+      </div>
+      <div class="flex items-center justify-between">
+        <button
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          type="submit"
+        >
+          Iniciar Sesión
+        </button>
+        <a
+          class="text-sm text-blue-500 hover:text-blue-800"
+          routerLink="['/register']"
+          (click)="navigateToRegister()"
+        >
+          Regístrate aquí.
+        </a>
+      </div>
+    </form>
+  </div>
+</div>
